@@ -1,0 +1,16 @@
+name: Example Actions for Sub.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  sub:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: example
+        run: ./test.sh
+
